@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.nytimes.task"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation deps.test.junit
+    implementation deps.test.ext
+    implementation deps.test.expresso
+
+    implementation deps.androidx.appCompat
+    implementation deps.androidx.core
+    implementation deps.androidx.recyclerView
+    implementation deps.androidx.cardview
+    implementation deps.androidx.material
+    implementation deps.androidx.swipeRefresh
+
+    implementation deps.kotlin
+
+    implementation deps.rx.java
+    implementation deps.rx.kotlin
+    implementation deps.rx.android
+    implementation deps.rx.relay
+
+    implementation deps.conductor.pager
+    implementation deps.conductor.runtime
+    implementation deps.conductor.lifecycle
+    implementation deps.conductor.tramsition
+
+    implementation deps.retrofit.retrofit
+    implementation deps.retrofit.java
+    implementation deps.retrofit.xml
+    implementation deps.retrofit.gson
+    implementation deps.retrofit.convertor
+
+    implementation deps.okHttp.okHttp
+    implementation deps.okHttp.interceptor
+
+    implementation deps.glide.client
+    implementation deps.glide.transformations
+    kapt deps.glide.compiler
+
+    implementation deps.koin.viewmodel
+    implementation deps.koin.scope
+
+    kapt deps.databinding
+
+    implementation deps.facebook.shimmer
+}

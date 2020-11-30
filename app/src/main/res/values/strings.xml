@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NYTimesTask</string>
+    <string name="nyt_api_key">3DRrUziUdmp7GwJvUDm0W8bAGHRtjoSg</string>
+
+    <!-- Menu Items -->
+    <string name="menu_action_search">Search</string>
+    <string name="menu_action_more">More</string>
+
+    <!-- Home Strings -->
+    <string name="home_empty_list">Sorry, no news for now</string>
+
+</resources>
