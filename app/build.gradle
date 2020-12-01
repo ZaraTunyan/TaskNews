@@ -32,8 +32,8 @@ android {
         jvmTarget = '1.8'
     }
 
-    dataBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding = true
     }
 
 }
@@ -45,6 +45,7 @@ dependencies {
     implementation deps.test.junit
     implementation deps.test.ext
     implementation deps.test.expresso
+    implementation deps.test.rule
 
     implementation deps.androidx.appCompat
     implementation deps.androidx.core
@@ -80,6 +81,7 @@ dependencies {
 
     implementation deps.koin.viewmodel
     implementation deps.koin.scope
+    implementation deps.koin.test
 
     kapt deps.databinding
 

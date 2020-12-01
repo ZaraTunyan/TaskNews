@@ -9,6 +9,7 @@ buildscript {
         apply from: "config.gradle"
         classpath "com.android.tools.build:gradle:4.1.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.1"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -16,13 +17,32 @@ buildscript {
 
 }
 
+apply plugin : "org.sonarqube"
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "NYTimesTask"
+        property "sonar.projectKey", "com.nytimes.task"
+        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.language", "java"
+        property "sonar.sources", "src/main/java"
+        property "sonar.tests", ["src/test/java"]
+    }
+}
+
+
+
 allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
