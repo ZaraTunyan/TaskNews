@@ -21,3 +21,8 @@ From Android Studio:
 ## Architecture
 This project used:
 * MVVM architecture by following MVI best practice principles 
+
+## Run Test
+1. To run JUnit test use -- gradlew test command 
+2. UI Expresso Testing  -- gradlew connectedAndroidTest command
+ 
