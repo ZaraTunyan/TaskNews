@@ -18,6 +18,10 @@ From Android Studio:
 2. Run emulator or connect device to computer
 3. Click on run section -> run 'app'
 
+From Command Line 
+1. Build debug version by -- gradlew assembleDebug
+2. Install debug version to device -- gradlew installDebug
+
 ## Architecture
 This project used:
 * MVVM architecture by following MVI best practice principles 
