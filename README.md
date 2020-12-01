@@ -1,7 +1,5 @@
 # TaskNews
 
-This is an breath explanation of the task
-
 ## Installation
 Clone this repository and import into **Android Studio**
 ```bash
