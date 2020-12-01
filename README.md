@@ -26,6 +26,14 @@ From Command Line
 This project used:
 * MVVM architecture by following MVI best practice principles 
 
+## Atch Level Used Libraries 
+
+* Conductor - UI Frames
+* Glide - Image Processing Library 
+* Retrofit - Http Client
+* Koin - DI
+* Rx/ RxRelay 
+
 ## Run Test
 1. To run JUnit test use -- gradlew test command 
 2. UI Expresso Testing  -- gradlew connectedAndroidTest command
