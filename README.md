@@ -26,7 +26,7 @@ From Command Line
 This project used:
 * MVVM architecture by following MVI best practice principles 
 
-## Atch Level Used Libraries 
+## Arch Level Used Libraries 
 
 * Conductor - UI Frames
 * Glide - Image Processing Library 
