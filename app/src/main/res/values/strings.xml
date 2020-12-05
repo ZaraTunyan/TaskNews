@@ -7,6 +7,10 @@
     <string name="menu_action_more">More</string>
 
     <!-- Home Strings -->
+    <string name="home_fragment_tag">Home</string>
     <string name="home_empty_list">Sorry, no news for now</string>
+
+    <!-- News Details Strings -->
+    <string name="news_details_fragment_tag">News Details</string>
 
 </resources>

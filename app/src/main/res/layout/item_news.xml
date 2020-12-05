@@ -62,8 +62,8 @@
                     style="@style/AppTextViewStyle"
                     android:layout_width="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:drawableStart="@drawable/ic_calendar"
-                    android:text="@{news.publishedDate}" />
+                    android:text="@{news.publishedDate}"
+                    app:drawableStartCompat="@drawable/ic_calendar" />
             </RelativeLayout>
         </LinearLayout>
 

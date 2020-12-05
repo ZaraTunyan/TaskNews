@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -40,8 +42,6 @@ android {
 
 dependencies {
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-
     implementation deps.test.junit
     implementation deps.test.ext
     implementation deps.test.expresso
@@ -53,18 +53,17 @@ dependencies {
     implementation deps.androidx.cardview
     implementation deps.androidx.material
     implementation deps.androidx.swipeRefresh
+    implementation deps.androidx.constraintLayout
 
-    implementation deps.kotlin
+    implementation deps.kotlin.stdlib
+    implementation deps.kotlin.coroutinesCore
+    implementation deps.kotlin.coroutinesAndroid
 
-    implementation deps.rx.java
-    implementation deps.rx.kotlin
-    implementation deps.rx.android
-    implementation deps.rx.relay
-
-    implementation deps.conductor.pager
-    implementation deps.conductor.runtime
-    implementation deps.conductor.lifecycle
-    implementation deps.conductor.tramsition
+    implementation deps.navigation.viewmodel
+    implementation deps.navigation.livedata
+    implementation deps.navigation.java8
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
 
     implementation deps.retrofit.retrofit
     implementation deps.retrofit.java

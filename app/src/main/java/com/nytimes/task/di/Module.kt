@@ -1,17 +1,14 @@
 package com.nytimes.task.di
 
-import com.nytimes.task.features.HomeViewModel
-import com.nytimes.task.helpers.provideGson
-import com.nytimes.task.helpers.provideHttpLoggingInterceptor
-import com.nytimes.task.helpers.provideOkHttpClient
-import com.nytimes.task.helpers.provideRetrofit
+import com.nytimes.task.R
+import com.nytimes.task.features.home.HomeViewModel
+import com.nytimes.task.helpers.*
 import com.nytimes.task.network.api.ApiService
 import com.nytimes.task.network.api.ApiServiceRepository
-import com.nytimes.task.helpers.ErrorHandler
 import org.koin.android.ext.koin.androidContext
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
-import org.koin.androidx.viewmodel.compat.ViewModelCompat.viewModel
 
 
 val DataModule = module {
@@ -31,5 +28,5 @@ val NetworkModule = module {
 }
 
 val PresentationModule = module {
-    factory { (key : String) -> HomeViewModel(get(), get(), key) }
+    viewModel { HomeViewModel(get(), get(), androidContext().getString(R.string.nyt_api_key)) }
 }
